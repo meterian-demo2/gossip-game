@@ -20,6 +20,7 @@ fun main() {
     drBlack.tellSecret("Third gossip")
 
     val game = GossipGame(listOf(mrBlue, mrPink, mrBrown, ladyViolet, drBlack, sirGray, redIdiot))
+
     game.render()
     game.propagate()
     game.propagate()
