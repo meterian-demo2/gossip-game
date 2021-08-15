@@ -1,6 +1,6 @@
-package persons.impl
+package person.impl
 
-import persons.Person
+import person.Person
 
 /**
  * Tells the secret to a new friend every turn, then forget about it. Can remember a single secret.

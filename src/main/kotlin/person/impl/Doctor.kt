@@ -1,4 +1,4 @@
-package persons.impl
+package person.impl
 
 import memory.impl.FIFOMemory
 

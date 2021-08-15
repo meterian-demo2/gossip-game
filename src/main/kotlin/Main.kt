@@ -1,5 +1,5 @@
-import engine.GossipGame
-import persons.impl.*
+import propagation.impl.ListPropagationStrategy
+import person.impl.*
 
 fun main() {
 
@@ -19,7 +19,10 @@ fun main() {
     ladyViolet.tellSecret("Second gossip")
     drBlack.tellSecret("Third gossip")
 
-    val game = GossipGame(listOf(mrBlue, mrPink, mrBrown, ladyViolet, drBlack, sirGray, redIdiot))
+    val game = GossipGame(
+        listOf(mrBlue, mrPink, mrBrown, ladyViolet, drBlack, sirGray, redIdiot),
+        ListPropagationStrategy()
+    )
 
     game.render()
     game.propagate()

@@ -1,10 +1,10 @@
-package persons
+package person
 
 import memory.Memory
 import memory.Secret
 import memory.impl.SingletonMemory
 
-abstract class Person(val name: String) {
+abstract class Person(private val name: String) {
 
     protected val friends = mutableListOf<Person>()
     protected open val memory: Memory = SingletonMemory()

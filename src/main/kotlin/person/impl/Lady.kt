@@ -1,6 +1,6 @@
-package persons.impl
+package person.impl
 
-import persons.Person
+import person.Person
 
 /**
  * Broadcast the secret to every friend in a single propagation, then forget about it.

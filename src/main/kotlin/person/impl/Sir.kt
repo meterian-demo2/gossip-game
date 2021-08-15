@@ -1,6 +1,6 @@
-package persons.impl
+package person.impl
 
-import persons.Person
+import person.Person
 import memory.impl.StackMemory
 
 /**

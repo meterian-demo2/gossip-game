@@ -1,4 +1,4 @@
-package persons.impl
+package person.impl
 
 import org.junit.Assert
 import org.junit.Test

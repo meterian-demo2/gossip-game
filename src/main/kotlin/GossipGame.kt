@@ -1,17 +1,14 @@
-package engine
+import person.Person
+import propagation.PropagationStrategy
 
-import persons.Person
-
-class GossipGame(private val players: List<Person>) {
+class GossipGame(
+    private val players: List<Person>,
+    private val propagationStrategy: PropagationStrategy
+) {
 
     fun propagate() {
         println("*** PROPAGATE ***")
-        print("Order: ")
-        for (player in players) {
-            print("${player.name} ")
-            player.propagate()
-        }
-        println("\n")
+        propagationStrategy.propagate(players)
         render()
     }
 
