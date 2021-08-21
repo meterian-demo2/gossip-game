@@ -13,14 +13,14 @@ open class Mister(name: String): Person(name) {
         val secret = memory.get()!!
         for (person in friends) {
             if (!alreadyTold.contains(person)) {
-                person.tellSecret(secret)
+                spread(secret, person)
                 alreadyTold.add(person)
                 if (alreadyTold.size < friends.size)
                     return
             }
         }
         alreadyTold.clear()
-        memory.forget()
+        forget()
     }
 
 }

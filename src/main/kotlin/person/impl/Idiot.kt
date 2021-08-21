@@ -9,8 +9,8 @@ class Idiot(name: String): Person(name) {
 
     override fun doPropagate() {
         val secret = memory.get()!!
-        secret.origin.tellSecret(secret)
-        memory.forget()
+        spread(secret, secret.origin)
+        forget()
     }
 
 }

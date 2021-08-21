@@ -9,11 +9,11 @@ class GossipGame(
     fun propagate() {
         println("*** PROPAGATE ***")
         propagationStrategy.propagate(players)
-        render()
+        summary()
     }
 
-    fun render() {
-        println("This is the situation right now:")
+    fun summary() {
+        println("\nThis is the situation:")
         for (player in players) {
             println(" * $player")
         }

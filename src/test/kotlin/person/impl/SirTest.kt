@@ -10,7 +10,7 @@ class SirTest {
 
     @Test
     fun should_not_tell_the_secret_nor_forget_it() {
-        sirGray.talksWith(mrOrange);
+        sirGray.talksWith(mrOrange)
         sirGray.tellSecret("Gossip8")
         sirGray.propagate()
         Assert.assertEquals("", mrOrange.ask())
@@ -33,7 +33,7 @@ class SirTest {
         sirGray.tellSecret("Gossip9")
         sirGray.tellSecret("Gossip10")
         sirGray.tellSecret("Gossip11")
-        Assert.assertEquals(4, sirGray.askHowMany())
+        Assert.assertEquals(4, sirGray.askHowManySecrets())
     }
 
 }

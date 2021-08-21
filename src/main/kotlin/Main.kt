@@ -1,5 +1,5 @@
-import propagation.impl.ListPropagationStrategy
 import person.impl.*
+import propagation.impl.ListPropagationStrategy
 
 fun main() {
 
@@ -24,7 +24,7 @@ fun main() {
         ListPropagationStrategy()
     )
 
-    game.render()
+    game.summary()
     game.propagate()
     game.propagate()
     game.propagate()

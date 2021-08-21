@@ -9,9 +9,9 @@ class Lady(name: String): Person(name) {
 
     override fun doPropagate() {
         for (friend in friends) {
-            friend.tellSecret(memory.get()!!)
+            spread(memory.get()!!, friend)
         }
-        memory.forget()
+        forget()
     }
 
 }

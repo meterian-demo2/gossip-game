@@ -6,8 +6,7 @@ import person.Person
 class GraphPropagationStrategy: PropagationStrategy {
 
     override fun propagate(players: List<Person>) {
-        // TODO find root nodes
-        // TODO propagate root nodes
+        // TODO you can implement a DFS here
     }
 
 }
