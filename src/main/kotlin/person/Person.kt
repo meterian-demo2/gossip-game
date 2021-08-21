@@ -6,6 +6,10 @@ import memory.impl.SingletonMemory
 
 abstract class Person(private val name: String) {
 
+    companion object {
+        var spreadOnReceiving: Boolean = false
+    }
+
     protected val friends = mutableListOf<Person>()
     protected open val memory: Memory = SingletonMemory()
 
@@ -25,10 +29,12 @@ abstract class Person(private val name: String) {
 
     fun ask() = memory.get()?.secret ?: ""
 
-    fun tellSecret(secret: String) = tellSecret(Secret(secret, this))
+    fun tellSecret(secret: String) = tellSecret(Secret(secret, this), false)
 
-    private fun tellSecret(secret: Secret) {
+    private fun tellSecret(secret: Secret, propagate: Boolean = spreadOnReceiving) {
         memory.put(secret)
+        if (propagate)
+            propagate()
     }
 
     fun askHowManySecrets() = memory.size()

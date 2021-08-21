@@ -1,7 +1,10 @@
+import person.Person
 import person.impl.*
 import propagation.impl.ListPropagationStrategy
 
 fun main() {
+
+    Person.spreadOnReceiving = false
 
     val mrBlue = Mister("Blue")
     val mrPink = Mister("Pink")
